@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="Heading">Sudoku Solver</div>
+    <div class="sudoku_grid">
+
+        <script>
+            for (let i = 0; i < 81; i++) {
+                document.write(`<input type="text" id="${i}" class="box1 ${i % 27 < 9 ? 'bl' : ''} ${i % 9 === 0 ? 'bt' : ''} ${Math.floor(i / 27) % 3 === 2 ? 'bb' : ''} ${i % 9 === 8 ? 'br' : ''}" maxlength="1">`);
+            }
+        </script>
+    </div>
+    <div class="Buttons">
+        <button id="GetPuzzle">Get Puzzle</button>
+        <button id="SolvePuzzle">Solve Puzzle</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
